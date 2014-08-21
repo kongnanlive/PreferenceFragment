@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.Holo.Light.Widget.Switch" parent="android:TextAppearance.Small">
+        <!-- Switch thumb asset presents a dark background. -->
+        <item name="android:textColor">@color/primary_text_holo_dark</item>
+    </style>
+    
+    <style name="PreferencePanel">
+    </style>
+    
+    <style name="PreferenceFragment"/>
+    <style name="PreferenceFragment.Holo">
+        <item name="android:paddingLeft">@dimen/preference_fragment_padding_side</item>
+        <item name="android:paddingRight">@dimen/preference_fragment_padding_side</item>
+    </style>
+    <style name="PreferenceHeaderPanel">
+        <item name="android:layout_marginLeft">@dimen/preference_screen_side_margin</item>
+        <item name="android:layout_marginRight">@dimen/preference_screen_side_margin_negative</item>
+        <item name="android:paddingTop">@dimen/preference_screen_header_vertical_padding</item>
+        <item name="android:paddingBottom">@dimen/preference_screen_header_vertical_padding</item>
+    </style>
+
+    <style name="PreferenceHeaderList">
+        <item name="android:paddingLeft">@dimen/preference_screen_header_padding_side</item>
+        <item name="android:paddingRight">@dimen/preference_screen_header_padding_side</item>
+        <item name="android:scrollbarStyle">@integer/preference_screen_header_scrollbarStyle</item>
+    </style>
+
+    <style name="PreferenceFragmentList">
+        <item name="android:paddingLeft">@dimen/preference_fragment_padding_side</item>
+        <item name="android:paddingRight">@dimen/preference_fragment_padding_side</item>
+    </style>
+</resources>

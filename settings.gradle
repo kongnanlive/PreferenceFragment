@@ -1,0 +1,3 @@
+include ':PreferenceFragmentExample'
+include ':appcompat_v7'
+include ':PreferenceFragment'

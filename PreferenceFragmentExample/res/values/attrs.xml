@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- These are the attributes that we want to retrieve from the theme
+         in app/PreferencesFromCode.java -->
+    <declare-styleable name="TogglePrefAttrs">
+        <attr name="android:preferenceLayoutChild" />
+    </declare-styleable>
+</resources>

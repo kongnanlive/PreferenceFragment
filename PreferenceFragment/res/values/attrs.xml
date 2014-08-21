@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Theme to use for dialogs spawned from this theme. -->
+    <attr name="dialogTheme" format="reference" />
+    <!-- Theme to use for alert dialogs spawned from this theme. -->
+    <attr name="alertDialogTheme" format="reference" />
+    <!-- ============ -->
+    <!-- Alert Dialog styles -->
+    <!-- ============ -->
+    <eat-comment />
+
+    <attr name="alertDialogStyle" format="reference" />
+    <attr name="alertDialogButtonGroupStyle" format="reference" />
+    <attr name="alertDialogCenterButtons" format="boolean" />
+
+    <!-- The set of attributes that describe a AlertDialog's theme. -->
+    <declare-styleable name="AlertDialog">
+        <attr name="fullDark" format="reference|color" />
+        <attr name="topDark" format="reference|color" />
+        <attr name="centerDark" format="reference|color" />
+        <attr name="bottomDark" format="reference|color" />
+        <attr name="fullBright" format="reference|color" />
+        <attr name="topBright" format="reference|color" />
+        <attr name="centerBright" format="reference|color" />
+        <attr name="bottomBright" format="reference|color" />
+        <attr name="bottomMedium" format="reference|color" />
+        <attr name="centerMedium" format="reference|color" />
+        <attr name="layout" />
+        <attr name="listLayout" format="reference" />
+        <attr name="multiChoiceItemLayout" format="reference" />
+        <attr name="singleChoiceItemLayout" format="reference" />
+        <attr name="listItemLayout" format="reference" />
+        <attr name="progressLayout" format="reference" />
+        <attr name="horizontalProgressLayout" format="reference" />
+    </declare-styleable>
+
+    <!-- The list divider used in alert dialogs. -->
+    <attr name="listDividerAlertDialog" format="reference" />
+    <!-- Drawable to use for multiple choice indicators. -->
+    <attr name="listChoiceIndicatorMultiple" format="reference" />
+
+    <!-- Drawable to use for single choice indicators. -->
+    <attr name="listChoiceIndicatorSingle" format="reference" />
+    <attr name="preferenceStyle" format="reference" />
+    <attr name="preferenceScreenStyle" format="reference" />
+    <attr name="checkBoxPreferenceStyle" format="reference" />
+    <attr name="preferenceCategoryStyle" format="reference" />
+    <attr name="dialogPreferenceStyle" format="reference" />
+    <attr name="editTextPreferenceStyle" format="reference" />
+    <!-- The preference layout that has the child/tabbed effect. -->
+    <attr name="preferenceLayoutChild" format="reference" />
+    <!-- Preference fragment list style -->
+    <attr name="preferenceFragmentListStyle" format="reference" />
+    <!-- Default style for switch preferences. -->
+    <attr name="switchPreferenceStyle" format="reference" />
+    <!-- Default style for the Switch widget. -->
+    <attr name="switchStyle" format="reference" />
+    <attr name="summary" format="string" />
+    <attr name="fragment" format="string" />
+    <attr name="layout" format="reference" />
+    <attr name="enabled" format="boolean" />
+    <attr name="persistent" format="boolean" />
+    <attr name="summaryOn" format="string" />
+    <attr name="entries" format="reference" />
+    <attr name="state_checked" format="boolean" />
+    <!-- Base attributes available to Preference. -->
+    <declare-styleable name="Preference">
+
+        <!-- The optional icon for the preference -->
+        <attr name="icon" />
+        <!-- The key to store the Preference value. -->
+        <attr name="key" format="string" />
+        <!-- The title for the Preference in a PreferenceActivity screen. -->
+        <attr name="title" />
+        <!-- The summary for the Preference in a PreferenceActivity screen. -->
+        <attr name="summary" />
+        <!--
+             The order for the Preference (lower values are to be ordered first). If this is not
+             specified, the default orderin will be alphabetic.
+        -->
+        <attr name="order" format="integer" />
+        <!--
+             When used inside of a modern PreferenceActivity, this declares
+             a new PreferenceFragment to be shown when the user selects this item.
+        -->
+        <attr name="fragment" />
+        <!--
+             The layout for the Preference in a PreferenceActivity screen. This should
+             rarely need to be changed, look at widgetLayout instead.
+        -->
+        <attr name="layout" />
+        <!--
+             The layout for the controllable widget portion of a Preference. This is inflated
+             into the layout for a Preference and should be used more frequently than
+             the layout attribute. For example, a checkbox preference would specify
+             a custom layout (consisting of just the CheckBox) here.
+        -->
+        <attr name="widgetLayout" format="reference" />
+        <!-- Whether the Preference is enabled. -->
+        <attr name="enabled" />
+        <!-- Whether the Preference is selectable. -->
+        <attr name="selectable" format="boolean" />
+        <!--
+             The key of another Preference that this Preference will depend on.  If the other
+             Preference is not set or is off, this Preference will be disabled.
+        -->
+        <attr name="dependency" format="string" />
+        <!-- Whether the Preference stores its value to the shared preferences. -->
+        <attr name="persistent" />
+        <!--
+             The default value for the preference, which will be set either if persistence
+             is off or persistence is on and the preference is not found in the persistent
+             storage.
+        -->
+        <attr name="defaultValue" format="string|boolean|integer|reference|float" />
+        <!--
+             Whether the view of this Preference should be disabled when
+             this Preference is disabled.
+        -->
+        <attr name="shouldDisableView" format="boolean" />
+    </declare-styleable>
+    <!-- Base attributes available to CheckBoxPreference. -->
+    <declare-styleable name="CheckBoxPreference">
+
+        <!--
+             The summary for the Preference in a PreferenceActivity screen when the
+             CheckBoxPreference is checked. If separate on/off summaries are not
+             needed, the summary attribute can be used instead.
+        -->
+        <attr name="summaryOn" />
+        <!--
+             The summary for the Preference in a PreferenceActivity screen when the
+             CheckBoxPreference is unchecked. If separate on/off summaries are not
+             needed, the summary attribute can be used instead.
+        -->
+        <attr name="summaryOff" format="string" />
+        <!--
+             The state (true for on, or false for off) that causes dependents to be disabled. By default,
+             dependents will be disabled when this is unchecked, so the value of this preference is false.
+        -->
+        <attr name="disableDependentsState" format="boolean" />
+    </declare-styleable>
+    <!-- Base attributes available to DialogPreference. -->
+    <declare-styleable name="DialogPreference">
+
+        <!-- The title in the dialog. -->
+        <attr name="dialogTitle" format="string" />
+        <!--
+             The message in the dialog. If a dialogLayout is provided and contains
+             a TextView with ID android:id/message, this message will be placed in there.
+        -->
+        <attr name="dialogMessage" format="string" />
+        <!-- The icon for the dialog. -->
+        <attr name="dialogIcon" format="reference" />
+        <!-- The positive button text for the dialog. Set to @null to hide the positive button. -->
+        <attr name="positiveButtonText" format="string" />
+        <!-- The negative button text for the dialog. Set to @null to hide the negative button. -->
+        <attr name="negativeButtonText" format="string" />
+        <!--
+             A layout to be used as the content View for the dialog. By default, this shouldn't
+             be needed. If a custom DialogPreference is required, this should be set. For example,
+             the EditTextPreference uses a layout with an EditText as this attribute.
+        -->
+        <attr name="dialogLayout" format="reference" />
+    </declare-styleable>
+    <!-- Base attributes available to ListPreference. -->
+    <declare-styleable name="ListPreference">
+
+        <!--
+             The human-readable array to present as a list. Each entry must have a corresponding
+             index in entryValues.
+        -->
+        <attr name="entries" />
+        <!--
+             The array to find the value to save for a preference when an entry from
+             entries is selected. If a user clicks on the second item in entries, the
+             second item in this array will be saved to the preference.
+        -->
+        <attr name="entryValues" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="MultiSelectListPreference">
+
+        <!--
+             The human-readable array to present as a list. Each entry must have a corresponding
+             index in entryValues.
+        -->
+        <attr name="entries" />
+        <!--
+             The array to find the value to save for a preference when an entry from
+             entries is selected. If a user clicks the second item in entries, the
+             second item in this array will be saved to the preference.
+        -->
+        <attr name="entryValues" />
+    </declare-styleable>
+    <declare-styleable name="SwitchPreference">
+
+        <!--
+             The summary for the Preference in a PreferenceActivity screen when the
+             SwitchPreference is checked. If separate on/off summaries are not
+             needed, the summary attribute can be used instead.
+        -->
+        <attr name="summaryOn" />
+        <!--
+             The summary for the Preference in a PreferenceActivity screen when the
+             SwitchPreference is unchecked. If separate on/off summaries are not
+             needed, the summary attribute can be used instead.
+        -->
+        <attr name="summaryOff" />
+        <!--
+             The text used on the switch itself when in the "on" state.
+             This should be a very SHORT string, as it appears in a small space.
+        -->
+        <attr name="switchTextOn" format="string" />
+        <!--
+             The text used on the switch itself when in the "off" state.
+             This should be a very SHORT string, as it appears in a small space.
+        -->
+        <attr name="switchTextOff" format="string" />
+        <!--
+             The state (true for on, or false for off) that causes dependents to be disabled. By default,
+             dependents will be disabled when this is unchecked, so the value of this preference is false.
+        -->
+        <attr name="disableDependentsState" />
+    </declare-styleable>
+    <declare-styleable name="PreferenceGroup">
+
+        <!--
+             Whether to order the Preference under this group as they appear in the XML file.
+             If this is false, the ordering will follow the Preference order attribute and
+             default to alphabetic for those without the order attribute.
+        -->
+        <attr name="orderingFromXml" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="Switch">
+
+        <!-- Drawable to use as the "thumb" that switches back and forth. -->
+        <attr name="thumb" format="reference" />
+        <!-- Drawable to use as the "track" that the switch thumb slides within. -->
+        <attr name="track" format="reference" />
+        <!-- Text to use when the switch is in the checked/"on" state. -->
+        <attr name="textOn" format="string" />
+        <!-- Text to use when the switch is in the unchecked/"off" state. -->
+        <attr name="textOff" format="string" />
+        <!-- Amount of padding on either side of text within the switch thumb. -->
+        <attr name="thumbTextPadding" format="dimension" />
+        <!-- TextAppearance style for text displayed on the switch thumb. -->
+        <attr name="switchTextAppearance" format="reference" />
+        <!-- Minimum width for the switch component -->
+        <attr name="switchMinWidth" format="dimension" />
+        <!-- Minimum space between the switch and caption text -->
+        <attr name="switchPadding" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="Android">
+
+        <!-- Text color. -->
+        <attr name="android:textColor" />
+        <!-- Size of the text. Recommended dimension type for text is "sp" for scaled-pixels (example: 15sp). -->
+        <attr name="android:textSize" />
+        <!-- Style (bold, italic, bolditalic) for the text. -->
+        <attr name="android:textStyle" />
+        <!-- Typeface (normal, sans, serif, monospace) for the text. -->
+        <attr name="android:typeface" />
+        <!-- Color of the text selection highlight. -->
+        <attr name="android:textColorHighlight" />
+        <!-- Color of the hint text. -->
+        <attr name="android:textColorHint" />
+        <!-- Color of the links. -->
+        <attr name="android:textColorLink" />
+    </declare-styleable>
+    <declare-styleable name="LinearLayout">
+
+        <!--
+             Should the layout be a column or a row?  Use "horizontal"
+             for a row, "vertical" for a column.  The default is
+             horizontal.
+        -->
+        <attr name="android:orientation" />
+        <attr name="android:gravity" />
+        <!--
+             When set to false, prevents the layout from aligning its children's
+             baselines. This attribute is particularly useful when the children
+             use different values for gravity. The default value is true.
+        -->
+        <attr name="android:baselineAligned" />
+        <!--
+          When a linear layout is part of another layout that is baseline
+          aligned, it can specify which of its children to baseline align to
+          (that is, which child TextView).
+        -->
+        <attr name="android:baselineAlignedChildIndex" />
+        <!--
+             Defines the maximum weight sum. If unspecified, the sum is computed
+             by adding the layout_weight of all of the children. This can be
+             used for instance to give a single child 50% of the total available
+             space by giving it a layout_weight of 0.5 and setting the weightSum
+             to 1.0.
+        -->
+        <attr name="android:weightSum" />
+        <!--
+             When set to true, all children with a weight will be considered having
+             the minimum size of the largest child. If false, all children are
+             measured normally.
+        -->
+        <attr name="android:measureWithLargestChild" />
+        <!-- Drawable to use as a vertical divider between buttons. -->
+        <attr name="android:divider" />
+        <attr name="android:showDividers" />
+        <!-- Size of padding on either end of a divider. -->
+        <attr name="android:dividerPadding" />
+    </declare-styleable>
+    <declare-styleable name="LinearLayout_Layout">
+        <attr name="android:layout_width" />
+        <attr name="android:layout_height" />
+        <attr name="android:layout_weight" />
+        <attr name="android:layout_gravity" />
+    </declare-styleable>
+
+    <!-- Default style for Headers pane in PreferenceActivity. -->
+    <attr name="preferenceFragmentStyle" format="reference" />
+    <!-- Drawable used as a background for activated items. -->
+    <attr name="activatedBackgroundIndicator" format="reference" />
+    <!-- Preference panel style -->
+    <attr name="preferencePanelStyle" format="reference" />
+    <!-- Preference headers panel style -->
+    <attr name="preferenceHeaderPanelStyle" format="reference" />
+    <!-- Preference list style -->
+    <attr name="preferenceListStyle" format="reference" />
+
+    <declare-styleable name="PreferenceHeader">
+
+        <!-- Identifier value for the header. -->
+        <attr name="id" format="reference" />
+        <!-- The title of the item that is shown to the user. -->
+        <attr name="title" />
+        <!-- The summary for the item. -->
+        <attr name="summary" />
+        <!-- The title for the bread crumb of this item. -->
+        <attr name="breadCrumbTitle" format="string" />
+        <!-- The short title for the bread crumb of this item. -->
+        <attr name="breadCrumbShortTitle" format="string" />
+        <!-- An icon for the item. -->
+        <attr name="icon" />
+        <!-- The fragment that is displayed when the user selects this item. -->
+        <attr name="fragment" />
+    </declare-styleable>
+
+    <!-- Preference frame layout styles. -->
+    <attr name="preferenceFrameLayoutStyle" format="reference" />
+
+    <declare-styleable name="PreferenceFrameLayout">
+
+        <!-- Padding to use at the top of the prefs content. -->
+        <attr name="borderTop" format="dimension" />
+        <!-- Padding to use at the bottom of the prefs content. -->
+        <attr name="borderBottom" format="dimension" />
+        <!-- Padding to use at the left of the prefs content. -->
+        <attr name="borderLeft" format="dimension" />
+        <!-- Padding to use at the right of the prefs content. -->
+        <attr name="borderRight" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="PreferenceFrameLayout_Layout">
+
+        <!-- Padding to use at the top of the prefs content. -->
+        <attr name="layout_removeBorders" format="boolean" />
+    </declare-styleable>
+    <!-- Color of list item text in alert dialogs. -->
+    <attr name="textColorAlertDialogListItem" format="reference|color" />
+
+</resources>

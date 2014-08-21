@@ -1,0 +1,185 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    
+    
+    <style name="MyTheme.Holo" parent="@style/Theme.AppCompat.Light">
+        <item name="android:checkboxStyle">@style/ECPCheckBox</item>
+        <item name="android:buttonStyle">@android:style/Widget.Button</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="preferenceScreenStyle">@style/ECPPreferenceScreen</item>
+        <item name="preferenceCategoryStyle">@style/ECPPreference.Catagory</item>
+        <!-- <item name="preferenceInformationStyle">@style/ECPPreference.Information</item> -->
+        <item name="preferenceStyle">@style/ECPPreference</item>
+        <item name="checkBoxPreferenceStyle">@style/ECPPreference.CheckBoxPreference</item>
+        <item name="switchPreferenceStyle">@style/ECPPreference.SwitchPreference</item>
+        <!-- <item name="yesNoPreferenceStyle">@style/ECPPreference.DialogPreference.YesNoPreference</item> -->
+        <item name="dialogPreferenceStyle">@style/ECPPreference.DialogPreference</item>
+        <item name="editTextPreferenceStyle">@style/ECPPreference.DialogPreference.EditTextPreference</item>
+        <!-- <item name="ringtonePreferenceStyle">@style/ECPPreference.RingtonePreference</item> -->
+        <item name="preferenceLayoutChild">@layout/preference_child</item>
+        <item name="android:preferenceLayoutChild">@layout/preference_child</item>
+        <item name="preferenceFragmentStyle">@style/PreferenceFragment.Holo</item>
+        <item name="preferencePanelStyle">@style/PreferencePanel</item>
+        <item name="preferenceHeaderPanelStyle">@style/PreferenceHeaderPanel</item>
+        <item name="preferenceListStyle">@style/PreferenceHeaderList</item>
+        <item name="switchStyle">@style/Switch</item>
+        <item name="android:listSeparatorTextViewStyle">@style/WidgetHoloLightTextViewListSeparator</item>
+        <item name="alertDialogTheme">@style/ThemeHoloLightDialogAlert</item>
+        <item name="alertDialogStyle">@style/AlertDialogHoloLight</item>
+        <item name="dialogTheme">@android:style/Theme.Dialog</item>
+        
+        <item name="activatedBackgroundIndicator">@drawable/activated_background_holo_light</item>
+        <item name="selectableItemBackground">@drawable/item_background_holo_light</item>
+    </style>
+    
+    <style name="ECPCheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/btn_check_holo_light</item>
+    </style>
+    
+    <style name="Switch">
+        <item name="track">@drawable/switch_track_holo_light</item>
+        <item name="thumb">@drawable/switch_inner_holo_light</item>
+        <item name="switchMinWidth">96dip</item>
+        <item name="switchPadding">16dip</item>
+        <item name="switchTextAppearance">@style/TextAppearance.Holo.Light.Widget.Switch</item>
+        <item name="textOn">@string/navigation_drawer_open</item>
+        <item name="textOff">@string/navigation_drawer_close</item>
+        <item name="thumbTextPadding">12dip</item>
+    </style>
+    
+    <style name="ECPPreference">
+        <item name="layout">@layout/preference</item>
+    </style>
+    
+    <style name="ECPPreferenceScreen"></style>
+    
+    <style name="ECPPreference.Catagory" parent="@style/ECPPreference">
+        <item name="layout">@layout/preference_category</item>
+        <!-- The title should not dim if the category is disabled, instead only the preference children should dim. -->
+        <item name="shouldDisableView">false</item>
+        <item name="selectable">false</item>
+    </style>
+    
+    <style name="ECPPreference.DialogPreference" parent="@style/ECPPreference">
+        <item name="positiveButtonText">@string/next_button_label</item>
+        <item name="negativeButtonText">@string/back_button_label</item>
+    </style>
+    
+    <style name="ECPPreference.DialogPreference.EditTextPreference" parent="@style/ECPPreference.DialogPreference">
+        <item name="dialogLayout">@layout/preference_dialog_edittext</item>
+    </style>
+    
+    <style name="ECPPreference.CheckBoxPreference">
+        <item name="widgetLayout">@layout/preference_widget_checkbox</item>
+    </style>
+    
+    <style name="ECPPreference.SwitchPreference">
+        <item name="widgetLayout">@layout/preference_widget_switch</item>
+        <item name="switchTextOn">@string/navigation_drawer_open</item>
+        <item name="switchTextOff">@string/navigation_drawer_close</item>
+    </style>
+    
+    <style name="WidgetTextViewListSeparator">
+        <item name="android:background">@drawable/dark_header_dither</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+       	<item name="android:textColor">?android:attr/textColorSecondary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">8dip</item>
+    </style>
+    
+    <style name="WidgetHoloLightTextViewListSeparator" parent="WidgetTextViewListSeparator">
+        <item name="android:background">@drawable/list_section_divider_holo_light</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    
+    <style name="AlertDialogHoloLight">
+        <!-- 
+        <item name="fullDark">@color/transparent</item>
+        <item name="topDark">@color/transparent</item>
+        <item name="centerDark">@color/transparent</item>
+        <item name="bottomDark">@color/transparent</item>
+        <item name="fullBright">@color/transparent</item>
+        <item name="topBright">@color/transparent</item>
+        <item name="centerBright">@color/transparent</item>
+        <item name="bottomBright">@color/transparent</item>
+        <item name="bottomMedium">@color/transparent</item>
+        <item name="centerMedium">@color/transparent</item>
+        <item name="layout">@layout/ecp_alert_dialog_holo</item>
+        <item name="listLayout">@layout/ecp_select_dialog_holo</item>
+        <item name="listItemLayout">@layout/select_dialog_item_holo</item>
+         -->
+        <!--
+        <item name="progressLayout">@layout/progress_dialog_holo</item>
+        <item name="horizontalProgressLayout">@layout/alert_dialog_progress_holo</item>
+        <item name="multiChoiceItemLayout">@layout/select_dialog_multichoice_holo</item>
+       
+        <item name="singleChoiceItemLayout">@layout/ecp_select_dialog_singlechoice_holo</item>
+         -->
+    </style>
+    
+    <style name="ThemeHoloLightDialogAlert">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowTitleStyle">@style/DialogWindowTitleHoloLight</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="buttonBarStyle">@style/HoloLightButtonBarAlertDialog</item>
+        <item name="listChoiceIndicatorSingle">@drawable/btn_radio_holo_light</item>
+        <item name="listChoiceIndicatorMultiple">@drawable/btn_check_holo_light</item>
+        <item name="buttonBarButtonStyle">@style/WidgetHoloLightButtonBorderless</item>
+        <item name="listChoiceBackgroundIndicator">@drawable/list_selector_holo_light</item>
+        <item name="android:textColorSecondary">@color/secondary_text_holo_light</item>
+        <item name="textColorAlertDialogListItem">@color/primary_text_holo_light</item>
+    </style>
+    
+    <style name="HoloLightButtonBarAlertDialog">
+        <item name="android:background">@null</item>
+        <item name="dividerPadding">0dp</item>
+    </style>
+
+    <style name="DialogWindowTitleHoloLight">
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:textAppearance">@style/TextAppearanceHoloLightDialogWindowTitle</item>
+    </style>
+    
+    <style name="TextAppearanceHoloLightDialogWindowTitle">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    
+     <style name="WidgetHoloLightButtonBorderless">
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:paddingLeft">4dip</item>
+        <item name="android:paddingRight">4dip</item>
+    </style>
+
+    <style name="WidgetHoloLightButtonBorderlessSmall">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+</resources>
