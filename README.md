@@ -30,7 +30,7 @@ Add the following config in your `build.gradle`:
 
 ```groovy
 dependencies {
-   compile 'com.daimajia.numberprogressbar:library:1.1@aar'
+   compile 'com.github.kongnanlive:preferencefragment::1.0@aar'
 }
 ```
 
