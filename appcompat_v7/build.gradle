@@ -8,6 +8,10 @@ android {
     compileSdkVersion 20
     buildToolsVersion "20.0.0"
 
+    lintOptions {
+        abortOnError false
+    }
+
     sourceSets {
         main {
             manifest.srcFile 'AndroidManifest.xml'

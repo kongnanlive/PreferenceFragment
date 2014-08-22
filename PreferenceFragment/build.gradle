@@ -1,5 +1,5 @@
 apply plugin: 'android-library'
-//apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'
+apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'
 
 dependencies {
     compile fileTree(dir: 'libs', include: '*.jar')
@@ -9,6 +9,10 @@ dependencies {
 android {
     compileSdkVersion 20
     buildToolsVersion "20.0.0"
+
+    lintOptions {
+        abortOnError false
+    }
 
     sourceSets {
         main {
