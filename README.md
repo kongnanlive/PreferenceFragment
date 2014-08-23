@@ -1,9 +1,9 @@
 ###Support PreferenceFragment
 -----
 
-非官方PreferenceFragment兼容库，支持Android1.6及更高版本。
+非官方PreferenceFragment兼容库，支持Android2.1及更高版本。
 
-Unofficial PreferenceFragment compatibility layer for Android 1.6 and up.
+Unofficial PreferenceFragment compatibility layer for Android 2.1 and up.
 
 ###About the status of the library
 
@@ -30,7 +30,8 @@ Add the following config in your `build.gradle`:
 
 ```groovy
 dependencies {
-   compile 'com.github.kongnanlive:preferencefragment::1.0@aar'
+   compile 'com.android.support:appcompat-v7:20.0.0'
+   compile 'cn.kongnannan:preferencefragment:1.1@aar'
 }
 ```
 
