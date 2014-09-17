@@ -87,7 +87,7 @@ http://developer.android.com/guide/topics/ui/settings.html
 
 
 ## License
-Copyright (c) 2014 [Dean Ding](http://weibo.com/kongnan)
+Copyright (c) 2014 [Kong Nan](http://weibo.com/kongnan)
 
 Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
 
