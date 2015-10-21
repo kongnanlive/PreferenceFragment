@@ -1,3 +1,14 @@
+###DEPRECATED
+-----
+PreferenceFragment is deprecated. 
+You can try
+https://github.com/jenzz/Android-MaterialPreference
+https://github.com/AndroidDeveloperLB/MaterialPreferenceLibrary
+https://github.com/Gericop/Android-Support-Preference-V7-Fix
+https://github.com/michael-rapp/AndroidPreferenceActivity
+
+Thanks for all your support!
+
 ###Support PreferenceFragment
 -----
 
